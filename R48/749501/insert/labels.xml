@@ -1,0 +1,827 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="regiseduardogregol" id="1">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.numFedTax" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="2">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="3">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="CNPJ da Empresa"/>
+			<column name="S_SHORT" value="CNPJ da Empresa"/>
+			<column name="S_DESCRIPTION" value="CNPJ da Empresa"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.numFedTax"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="4">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.dscCompany" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="5">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.dscCompany"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="6">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Razão Social da Empresa"/>
+			<column name="S_SHORT" value="Razão Social da Empresa"/>
+			<column name="S_DESCRIPTION" value="Razão Social da Empresa"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.dscCompany"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="7">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.numFedTax" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="8">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="9">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="CNPJ do Empregador"/>
+			<column name="S_SHORT" value="CNPJ do Empregador"/>
+			<column name="S_DESCRIPTION" value="CNPJ do Empregador"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.numFedTax"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="10">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.dscEmployer" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="11">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.dscEmployer"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="12">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Razão Social do Empregador"/>
+			<column name="S_SHORT" value="Razão Social do Empregador"/>
+			<column name="S_DESCRIPTION" value="Razão Social do Empregador"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.dscEmployer"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="13">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.code" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="14">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.code"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="15">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Código"/>
+			<column name="S_SHORT" value="Código"/>
+			<column name="S_DESCRIPTION" value="Código"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.code"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="16">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.origemOccurrence" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="17">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.origemOccurrence"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="18">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Ocorrência de origem"/>
+			<column name="S_SHORT" value="Ocorrência de origem"/>
+			<column name="S_DESCRIPTION" value="Ocorrência de origem"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.origemOccurrence"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="19">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.status" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="20">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.status"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="21">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Status"/>
+			<column name="S_SHORT" value="Status"/>
+			<column name="S_DESCRIPTION" value="Status"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.status"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="22">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datOccurrence" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="23">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datOccurrence"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="24">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data da ocorrência"/>
+			<column name="S_SHORT" value="Data da ocorrência"/>
+			<column name="S_DESCRIPTION" value="Data da ocorrência"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datOccurrence"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="25">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.event" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="26">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.event"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="27">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Evento"/>
+			<column name="S_SHORT" value="Evento"/>
+			<column name="S_DESCRIPTION" value="Evento"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.event"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="28">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.eventId" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="29">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.eventId"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="30">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Id"/>
+			<column name="S_SHORT" value="Id"/>
+			<column name="S_DESCRIPTION" value="Id"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.eventId"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="31">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.initialDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="32">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.initialDate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="33">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data inicial"/>
+			<column name="S_SHORT" value="Data inicial"/>
+			<column name="S_DESCRIPTION" value="Data inicial"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.initialDate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="34">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.endDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="35">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.endDate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="36">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data final"/>
+			<column name="S_SHORT" value="Data final"/>
+			<column name="S_DESCRIPTION" value="Data final"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.endDate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="37">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.cbo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="38">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.cbo"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="39">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="CBO"/>
+			<column name="S_SHORT" value="CBO"/>
+			<column name="S_DESCRIPTION" value="CBO"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.cbo"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="40">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.dscJobPosition" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="41">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.dscJobPosition"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="42">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nome do Cargo"/>
+			<column name="S_SHORT" value="Nome do Cargo"/>
+			<column name="S_DESCRIPTION" value="Nome do Cargo"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.dscJobPosition"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="43">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indAccumulate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="44">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indAccumulate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="45">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Acumulação de Cargo"/>
+			<column name="S_SHORT" value="Acumulação de Cargo"/>
+			<column name="S_DESCRIPTION" value="Acumulação de Cargo"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indAccumulate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="46">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indExclusiveDedication" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="47">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indExclusiveDedication"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="48">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Dedicação Exclusiva"/>
+			<column name="S_SHORT" value="Dedicação Exclusiva"/>
+			<column name="S_DESCRIPTION" value="Dedicação Exclusiva"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indExclusiveDedication"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="49">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indTimeCount" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="50">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indTimeCount"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="51">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Contagem de Tempo Especial"/>
+			<column name="S_SHORT" value="Contagem de Tempo Especial"/>
+			<column name="S_DESCRIPTION" value="Contagem de Tempo Especial"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indTimeCount"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="52">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.numLaw" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="53">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.numLaw"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="54">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Número da Lei"/>
+			<column name="S_SHORT" value="Número da Lei"/>
+			<column name="S_DESCRIPTION" value="Número da Lei"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.numLaw"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="55">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datLaw" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="56">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datLaw"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="57">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data da Lei"/>
+			<column name="S_SHORT" value="Data da Lei"/>
+			<column name="S_DESCRIPTION" value="Data da Lei"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datLaw"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="58">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indSituation" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="59">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indSituation"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="60">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Situação Gerada pela Lei"/>
+			<column name="S_SHORT" value="Situação Gerada pela Lei"/>
+			<column name="S_DESCRIPTION" value="Situação Gerada pela Lei"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indSituation"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="61">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.publicJob" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="62">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.publicJob"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="63">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Cargos Públicos"/>
+			<column name="S_SHORT" value="Cargos Públicos"/>
+			<column name="S_DESCRIPTION" value="Cargos Públicos"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.publicJob"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="64">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.lawTitle" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="65">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.lawTitle"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="66">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Lei que criou/extinguiu/reestruturou o cargo"/>
+			<column name="S_SHORT" value="Lei que criou/extinguiu/reestruturou o cargo"/>
+			<column name="S_DESCRIPTION" value="Lei que criou/extinguiu/reestruturou o cargo"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.lawTitle"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="67">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.recordsTitle" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="68">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.recordsTitle"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="69">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Registros" />
+			<column name="S_SHORT" value="Registros"/>
+			<column name="S_DESCRIPTION" value="Registros" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.recordsTitle"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="70">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.detailButton" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="71">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.detailButton"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="72">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Detalhado" />
+			<column name="S_SHORT" value="Detalhado"/>
+			<column name="S_DESCRIPTION" value="Detalhado" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.detailButton"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="73">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalData" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="74">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalData"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="75">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Dados Gerais" />
+			<column name="S_SHORT" value="Dados Gerais"/>
+			<column name="S_DESCRIPTION" value="Dados Gerais" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalData"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="76">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalInfo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="77">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalInfo"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="78">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Informações Gerais" />
+			<column name="S_SHORT" value="Informações Gerais"/>
+			<column name="S_DESCRIPTION" value="Informações Gerais" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.generalInfo"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="79">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.aditionalInfo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="80">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.aditionalInfo"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="81">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Informações Adicionais" />
+			<column name="S_SHORT" value="Informações Adicionais"/>
+			<column name="S_DESCRIPTION" value="Informações Adicionais" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JobPs.aditionalInfo"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="82">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codIdEvent" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="83">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codIdEvent"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="84">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Indicador do evento" />
+			<column name="S_SHORT" value="Indicador do evento"/>
+			<column name="S_DESCRIPTION" value="Indicador do evento" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codIdEvent"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="85">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codVsProc" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="86">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codVsProc"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="87">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Versão do sistema emissor" />
+			<column name="S_SHORT" value="Versão do sistema emissor"/>
+			<column name="S_DESCRIPTION" value="Versão do sistema emissor" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.codVsProc"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="88">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indEnvironment" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="89">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indEnvironment"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="90">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Tipo do ambiente" />
+			<column name="S_SHORT" value="Tipo do ambiente"/>
+			<column name="S_DESCRIPTION" value="Tipo do ambiente" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indEnvironment"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="91">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indPrcEmi" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="92">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indPrcEmi"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="93">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Processo de emisão do evento" />
+			<column name="S_SHORT" value="Processo de emisão do evento"/>
+			<column name="S_DESCRIPTION" value="Processo de emisão do evento" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.indPrcEmi"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="94">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datInsertUpdateNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="95">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datInsertUpdateNew"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="96">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova data inicial" />
+			<column name="S_SHORT" value="Nova data inicial"/>
+			<column name="S_DESCRIPTION" value="Nova data inicial" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datInsertUpdateNew"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="97">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datEndEffectiveNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="98">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datEndEffectiveNew"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="lucasbittencurt" id="99">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova data final" />
+			<column name="S_SHORT" value="Nova data final"/>
+			<column name="S_DESCRIPTION" value="Nova data final" />
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2036JpsOc.datEndEffectiveNew"/>
+		</insert>
+	</changeSet>
+	
+</databaseChangeLog>

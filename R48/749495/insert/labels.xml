@@ -1,0 +1,1155 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	<changeSet author="regiseduardogregol" id="1">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.numFedTax" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="2">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="3">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="CNPJ da Empresa"/>
+			<column name="S_SHORT" value="CNPJ da Empresa"/>
+			<column name="S_DESCRIPTION" value="CNPJ da Empresa"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.numFedTax"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="4">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.dscCompany" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="5">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.dscCompany"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="6">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Razão Social da Empresa"/>
+			<column name="S_SHORT" value="Razão Social da Empresa"/>
+			<column name="S_DESCRIPTION" value="Razão Social da Empresa"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.company.dscCompany"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="7">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.numFedTax" />
+			<column name="ID_DICTIONARY_TYPE"
+				valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="8">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="9">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="CNPJ do Empregador"/>
+			<column name="S_SHORT" value="CNPJ do Empregador"/>
+			<column name="S_DESCRIPTION" value="CNPJ do Empregador"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.numFedTax"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="10">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.dscEmployer" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="11">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.dscEmployer"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="12">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Razão Social do Empregador"/>
+			<column name="S_SHORT" value="Razão Social do Empregador"/>
+			<column name="S_DESCRIPTION" value="Razão Social do Empregador"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.tbrCad3016Emplr.dscEmployer"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="13">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.generalData" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="14">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.generalData"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="15">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Dados Gerais"/>
+			<column name="S_SHORT" value="Dados Gerais"/>
+			<column name="S_DESCRIPTION" value="Dados Gerais"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.generalData"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="16">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.records" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="17">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.records"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="18">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Registros"/>
+			<column name="S_SHORT" value="Registros"/>
+			<column name="S_DESCRIPTION" value="Registros"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.records"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="19">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.details" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="20">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.details"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="21">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Integrado/Gerado Detalhado"/>
+			<column name="S_SHORT" value="Integrado/Gerado Detalhado"/>
+			<column name="S_DESCRIPTION" value="Integrado/Gerado Detalhado"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.details"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="22">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.log" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="23">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.log"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="24">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Log"/>
+			<column name="S_SHORT" value="Log"/>
+			<column name="S_DESCRIPTION" value="Log"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.log"/>
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="25">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.descriptionRubrica" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="26">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.descriptionRubrica"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="27">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Descrição da Rubrica"/>
+			<column name="S_SHORT" value="Descrição da Rubrica"/>
+			<column name="S_DESCRIPTION" value="Descrição da Rubrica"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.descriptionRubrica"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="28">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeRubrica" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="29">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeRubrica"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="30">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Tipo da Rubrica"/>
+			<column name="S_SHORT" value="Tipo da Rubrica"/>
+			<column name="S_DESCRIPTION" value="Tipo da Rubrica"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeRubrica"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="31">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dsr" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="32">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dsr"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="33">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="DSR"/>
+			<column name="S_SHORT" value="DSR"/>
+			<column name="S_DESCRIPTION" value="DSR"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dsr"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="34">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.holiday" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="35">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.holiday"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="36">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Férias"/>
+			<column name="S_SHORT" value="Férias"/>
+			<column name="S_DESCRIPTION" value="Férias"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.holiday"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="37">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.rescission" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="38">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.rescission"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="39">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Rescisão"/>
+			<column name="S_SHORT" value="Rescisão"/>
+			<column name="S_DESCRIPTION" value="Rescisão"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.rescission"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="40">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.factorRubrica" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="41">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.factorRubrica"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="42">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Fator da Rubrica"/>
+			<column name="S_SHORT" value="Fator da Rubrica"/>
+			<column name="S_DESCRIPTION" value="Fator da Rubrica"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.factorRubrica"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="43">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.obsRubrica" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="44">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.obsRubrica"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="45">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Observação da Rubrica"/>
+			<column name="S_SHORT" value="Observação da Rubrica"/>
+			<column name="S_DESCRIPTION" value="Observação da Rubrica"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.obsRubrica"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="46">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribPrevSocial" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="47">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribPrevSocial"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="48">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária para a Previdência Social"/>
+			<column name="S_SHORT" value="Incidência Tributária para a Previdência Social"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária para a Previdência Social"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribPrevSocial"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="49">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribFgts" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="50">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribFgts"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="51">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária para o FGTS"/>
+			<column name="S_SHORT" value="Incidência Tributária para o FGTS"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária para o FGTS"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribFgts"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="52">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribIRRF" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="53">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribIRRF"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="54">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária para o IRRF"/>
+			<column name="S_SHORT" value="Incidência Tributária para o IRRF"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária para o IRRF"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribIRRF"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="55">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribSindLaboral" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="56">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribSindLaboral"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="57">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária para Contribuição Sind. Laboral"/>
+			<column name="S_SHORT" value=""/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária para Contribuição Sind. Laboral"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribSindLaboral"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="58">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.13Salario" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="59">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.13Salario"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="60">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="13º Salário"/>
+			<column name="S_SHORT" value="13º Salário"/>
+			<column name="S_DESCRIPTION" value="13º Salário"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.13Salario"/>
+		</insert>
+	</changeSet>
+  	
+  	<changeSet author="regiseduardogregol" id="61">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.earlyWarning" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="62">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.earlyWarning"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="63">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Aviso Prévio"/>
+			<column name="S_SHORT" value="Aviso Prévio"/>
+			<column name="S_DESCRIPTION" value="Aviso Prévio"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.earlyWarning"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="64">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.process" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="65">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.process"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="66">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Processos"/>
+			<column name="S_SHORT" value="Processos"/>
+			<column name="S_DESCRIPTION" value="Processos"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.process"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="67">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribPrev" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="68">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribPrev"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="69">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária de Contribuição Previdenciaria"/>
+			<column name="S_SHORT" value=""/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária de Contribuição Previdenciaria"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribContribPrev"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="70">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeProcess" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="71">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeProcess"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="72">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Tipo do Processo"/>
+			<column name="S_SHORT" value="Tipo do Processo"/>
+			<column name="S_DESCRIPTION" value="Tipo do Processo"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeProcess"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="73">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.numProcess" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="74">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.numProcess"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="75">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Número do Processo"/>
+			<column name="S_SHORT" value="Número do Processo"/>
+			<column name="S_DESCRIPTION" value="Número do Processo"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.numProcess"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="76">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.extensionDecision" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="77">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.extensionDecision"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="78">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Extensão da Decisão"/>
+			<column name="S_SHORT" value="Extensão da Decisão"/>
+			<column name="S_DESCRIPTION" value="Extensão da Decisão"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.extensionDecision"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="79">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfIRRF" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="80">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfIRRF"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="81">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária de IRRF"/>
+			<column name="S_SHORT" value="Incidência Tributária de IRRF"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária de IRRF"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfIRRF"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="82">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfFGTS" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="83">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfFGTS"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="84">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária de FGTS"/>
+			<column name="S_SHORT" value="Incidência Tributária de FGTS"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária de FGTS"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfFGTS"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="85">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfContrSindical" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="86">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfContrSindical"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="87">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Incidência Tributária de Contribuição Sindical"/>
+			<column name="S_SHORT" value="Incidência Tributária de Contribuição Sindical"/>
+			<column name="S_DESCRIPTION" value="Incidência Tributária de Contribuição Sindical"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.incTribOfContrSindical"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="88">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.InfAdd" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="89">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.InfAdd"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="90">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Informações Adicionais"/>
+			<column name="S_SHORT" value="Informações Adicionais"/>
+			<column name="S_DESCRIPTION" value="Informações Adicionais"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.InfAdd"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="91">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dataXML" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="92">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dataXML"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="93">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Dados do XML"/>
+			<column name="S_SHORT" value="Dados do XML"/>
+			<column name="S_DESCRIPTION" value="Dados do XML"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dataXML"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="94">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.idEvent" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="95">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.idEvent"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="96">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Identificador do Evento"/>
+			<column name="S_SHORT" value="Identificador do Evento"/>
+			<column name="S_DESCRIPTION" value="Identificador do Evento"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.idEvent"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="97">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.systemVersion" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="98">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.systemVersion"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="99">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Versão do Sistema Emissor"/>
+			<column name="S_SHORT" value="Versão do Sistema Emissor"/>
+			<column name="S_DESCRIPTION" value="Versão do Sistema Emissor"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.systemVersion"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="100">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeEnvironment" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="101">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeEnvironment"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="102">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Tipo do Ambiente"/>
+			<column name="S_SHORT" value="Tipo do Ambiente"/>
+			<column name="S_DESCRIPTION" value="Tipo do Ambiente"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.typeEnvironment"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="103">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.eventEmissionProcess" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="104">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.eventEmissionProcess"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="105">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Processo de emissão do evento"/>
+			<column name="S_SHORT" value="Processo de emissão do evento"/>
+			<column name="S_DESCRIPTION" value="Processo de emissão do evento"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.eventEmissionProcess"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="106">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dateFinal" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="107">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dateFinal"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="108">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data Final"/>
+			<column name="S_SHORT" value="Data Final"/>
+			<column name="S_DESCRIPTION" value="Data Final"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.dateFinal"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="109">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newStartDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="110">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newStartDate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="111">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova Data Inicial"/>
+			<column name="S_SHORT" value="Nova Data Inicial"/>
+			<column name="S_DESCRIPTION" value="Nova Data Inicial"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newStartDate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="112">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newFinalDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="113">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newFinalDate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="114">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova Data Final"/>
+			<column name="S_SHORT" value="Nova Data Final"/>
+			<column name="S_DESCRIPTION" value="Nova Data Final"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.newFinalDate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="115">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.close" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="116">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.close"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="117">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Fechar"/>
+			<column name="S_SHORT" value="Fechar"/>
+			<column name="S_DESCRIPTION" value="Fechar"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.close"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="118">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.download" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="119">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.download"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="120">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Download"/>
+			<column name="S_SHORT" value="Download"/>
+			<column name="S_DESCRIPTION" value="Download"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.download"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="121">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.description" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="122">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.description"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="123">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Descrição"/>
+			<column name="S_SHORT" value="Descrição"/>
+			<column name="S_DESCRIPTION" value="Descrição"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.description"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="124">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.occurrenceDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="125">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.occurrenceDate"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="126">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data da Ocorrência"/>
+			<column name="S_SHORT" value="Data da Ocorrência"/>
+			<column name="S_DESCRIPTION" value="Data da Ocorrência"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.occurrenceDate"/>
+		</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="127">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.natureRubrica" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT ID_DICTIONARY_TYPE FROM FMK_DICTIONARY_TYPE WHERE S_DICTIONARY_TYPE_NAME = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />
+		</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="128">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.natureRubrica"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	<changeSet author="regiseduardogregol" id="129">
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Natureza da Rubrica"/>
+			<column name="S_SHORT" value="Natureza da Rubrica"/>
+			<column name="S_DESCRIPTION" value="Natureza da Rubrica"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2023PayIt.natureRubrica"/>
+		</insert>
+	</changeSet>
+	
+	<!-- LOV -->
+	<changeSet author="regiseduardogregol" id="130">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="131">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.company.dscCompany"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="132">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.numFedTax"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+	
+	<changeSet author="regiseduardogregol" id="133">
+			<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+				<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')"/>
+				<column name="S_DICTIONARY_KEY" value="TbrCad3016Emplr.dscEmployer"/>
+				<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Rubricas')"/>
+			</insert>
+	</changeSet>
+</databaseChangeLog>

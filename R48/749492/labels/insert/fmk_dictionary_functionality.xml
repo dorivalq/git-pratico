@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet author="fabiofernandes81" id="1">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadCompany_numFedTax" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadCompany_dscCompany" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.numFedTaxEmployer" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="4">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.dscEmployer" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="HeaderPanel.generalData" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="6">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadHolidayTp.indActive" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.Status" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.dateOccurrence" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="9">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.codEvent" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="10">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.idtEvent" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="11">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.finalDate" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="12">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="labelPattern.records" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="13">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.detail" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="14">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.iniDate" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="15">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.log" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="16">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="btnFechar" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="17">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.occurrenceOrigin" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="18">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.event" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="19">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.id" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="20">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.complementaryData" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="21">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.generalInfo" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="22">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadPartner.generalInfo" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="23">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.indContributionBulding" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="24">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.numRiskWorkPrc" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="25">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.additionalInfo" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="26">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.indEnvironment" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="27">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.indPrcEmi" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="28">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.datInsertUpdateNew" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="29">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.datEndEffectiveNew" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="30">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad3016Emplr.company.numFedTax" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="31">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad3016Emplr.company.dscCompany" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="32">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad3016Emplr.numFedTax" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="33">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad3016Emplr.dscEmployer" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="34">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_1" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="35">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_2" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="36">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_3" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="37">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_4" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="38">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_5" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="39">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_6" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="40">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_7" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="41">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_8" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="42">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_9" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="43">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_10" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="44">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EVENT_STATUS_11" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="45">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DICT_PROCESS_TYPE_1" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="46">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DICT_PROCESS_TYPE_2" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="47">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EFD_EVENTO_TIPO_AMBIENTE_1" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="48">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="DM_EFD_EVENTO_PROCESSO_EMISSAO_1" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Estabelecimentos e Obras')" />
+		</insert>
+	</changeSet>
+		
+</databaseChangeLog>

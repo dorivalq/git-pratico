@@ -1,0 +1,28 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  <changeSet author="dorivalquerino" id="1">
+    <createTable tableName="TBR_CAD_1021_PORT" remarks="Cadastro de Operadores Portuários.">
+      <column name="IDT_PORT" remarks="Identificador do Operador Portuário." type="NUMBER(22)">
+		<constraints nullable="false"/>
+	  </column>
+      <column name="IDT_EMPLR" remarks="Identificador do empregador." type="NUMBER(22)">
+		<constraints nullable="false"/>
+	  </column>
+      <column name="NUM_FED_TAX_PORT_OP" remarks="Cnpj do Operador Portuário." type="VARCHAR2(14)">
+		<constraints nullable="false"/>
+	  </column>
+      <column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>      
+      <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+	  <column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+      <column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="2">
+    <addUniqueConstraint columnNames="IDT_EMPLR, NUM_FED_TAX_PORT_OP" constraintName="UK_TBR_CAD_1021_PORT_001" tableName="TBR_CAD_1021_PORT"/>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="3">
+    <addPrimaryKey columnNames="IDT_PORT" constraintName="PK_TBR_CAD_1021_PORT" tableName="TBR_CAD_1021_PORT"/>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="4">
+    <addForeignKeyConstraint baseColumnNames="IDT_EMPLR" baseTableName="TBR_CAD_1021_PORT" constraintName="FK_TBR_CAD_1021_PORT_001" referencedColumnNames="IDT_EMPLR" referencedTableName="TBR_CAD_3016_EMPLR"/>
+  </changeSet>
+</databaseChangeLog>

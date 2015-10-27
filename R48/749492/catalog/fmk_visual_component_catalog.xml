@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet author="fabiofernandes81" id="1">
+		<insert tableName="FMK_VISUAL_COMPONENT_CATALOG">
+			<column name="ID_VISUAL_COMPONENT_CATALOG" valueComputed="fnc_fmk_jpa_seq_nextval('FmkVisualComponentCatalog')" />
+			<column name="S_COD_CATALOG" value="CAT_TBR_CAD_3016_EMPLR" />
+			<column name="S_EJBQL" value="select o from TbrCad3016Emplr o " />
+			<column name="S_DESCRIPTION" value="Catalog para  a entidade empregador" />
+			
+		</insert>		
+	</changeSet>
+</databaseChangeLog>	

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">					  
+
+	<include file="drop/tbr_cad_2023_pay_it.xml" relativeToChangelogFile="true"/>
+	<include file="create_table/tbr_cad_2023_pay_it.xml" relativeToChangelogFile="true"/>
+	<include file="create_table/tbr_cad_2023_pit_oc.xml" relativeToChangelogFile="true"/>
+	<include file="insert/labels.xml" relativeToChangelogFile="true"/>
+	
+</databaseChangeLog> 

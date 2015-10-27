@@ -1,3 +1,5 @@
-Arquivo criado via web
-primeiro conflitando via web
+Arquivo criado conflito web
+--linha do meio
+primeiro teste via web
+--outra no meio
 sanvando...

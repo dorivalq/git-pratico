@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	
+	<!-- DM_EVENT_STATUS -->
+	<changeSet author="fabiofernandes81" id="1">
+		<insert tableName="FMK_DOMAIN">
+			<column name="ID_DOMAIN" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDomain')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_9" />
+			<column name="S_KEY" value="DM_EVENT_STATUS" />
+			<column name="S_VALUE" value="9" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">
+		<insert tableName="FMK_DOMAIN">
+			<column name="ID_DOMAIN" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDomain')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_10" />
+			<column name="S_KEY" value="DM_EVENT_STATUS" />
+			<column name="S_VALUE" value="10" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">
+		<insert tableName="FMK_DOMAIN">
+			<column name="ID_DOMAIN" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDomain')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_11" />
+			<column name="S_KEY" value="DM_EVENT_STATUS" />
+			<column name="S_VALUE" value="11" />			
+		</insert>		
+	</changeSet>
+	
+	
+</databaseChangeLog>

@@ -1,0 +1,69 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  <changeSet author="regiseduardogregol" id="1">
+    <createTable tableName="TBR_CAD_2023_PIT_OC" remarks="Cadastro das Ocorrências da Rubrica do eSocial">
+      <column name="IDT_PIT_OC" remarks="Identificador único da ocorrência da rubrica." type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="IDT_PAYROLL_ITEM" remarks="Identificador único da Rubrica." type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="DAT_OCCURENCE" remarks="Data da Ocorrência" type="DATE">
+        <constraints nullable="false"/>
+      </column>
+      <column name="IND_LAYOUT_ESOCIAL" remarks="Informação de Controle.   Indicador utilizado para sinalizar que o layout  utilizado na integração foi o XML formato eSOCIAL. Preenchido com  S - Layout eSocial.                          N ou nulo - Layout Thomson Reuters;            Domínio DM_SIM_NAO." type="CHAR(1)"/>
+      <column name="COD_OPER" remarks="Informação de Controle.       Indicador da operação proveniente do layout eSocial.  Preenchido com : I - Inclusão;                           A - Alteração;                           E - Exclusão;                          IA - Inclusão ou Alteração; Domínio DM_TIPO_OPERACAO_INTEGRACAO." type="VARCHAR2(2)"/>
+      <column name="COD_ID_EVENT" remarks="Identificador único do Evento eSocial (id)" type="VARCHAR2(36)"/>
+      <column name="COD_EVENT" remarks="Código do Evento eSocial . Ex: S-1000, S-1020, etc" type="VARCHAR2(36)"/>
+      <column name="IND_ENVIRONMENT" remarks="Identificação do ambiente (tpAmb): 1 - Produção; 2 - Pré-produção - dados reais; 3 - Pré-produção - dados fictícios. Domínio DM_EFD_EVENTO_TIPO_AMBIENTE." type="CHAR(1)"/>
+      <column name="IND_PRC_EMI" remarks="Processo de emissão do evento eSocial (prcEmi) 1- Emissão com aplicativo do empregador Domínio DM_EFD_EVENTO_PROCESSO_EMISSAO." type="CHAR(1)"/>
+      <column name="COD_VS_PROC" remarks="Versão do Processo emissor do evento eSocial (verProc)" type="VARCHAR(20)"/>
+      <column name="IND_OC_EVT" remarks="Indicador de Ocorrência ou Evento: O - Ocorrência E - Evento" type="CHAR(1)"/>
+      <column name="IND_STATUS" remarks="Indicador do Status" type="CHAR(1)"/>
+      <column name="DAT_INSERT_UPDATE" remarks="Date de início de validade do cadastro." type="DATE">
+        <constraints nullable="false"/>
+      </column>
+      <column name="DAT_END_EFFECTIVE" remarks="Data final de validade do cadastro." type="DATE"/>
+      <column name="DAT_INSERT_UPDATE_NEW" remarks="Date de início de validade nova validade." type="DATE"/>
+      <column name="DAT_END_EFFECTIVE_NEW" remarks="Date fim de validade anterior nova validade." type="DATE"/>
+      <column name="DSC_PAYROLL_ITEM" remarks="Descrição da rubrica." type="VARCHAR2(100)"/>
+      <column name="COD_PAYROLL_CLASSIF" remarks="Código da Natureza da rubrica. Conforme Lista de Referência relativa a Tabela de Natureza da Rubrica (FXD00032) Este campo pode ser preenchido com código registrado no sistema de origeme e utilizar a funcionalidade de DexPara. " type="VARCHAR2(50)"/>
+      <column name="IND_PAYROLL_TYPE" remarks="Identificador do Tipo da rubrica: 1 - Vencimento; 2 - Desconto; 3 - Informativa; 4 - Informativa dedutora." type="CHAR(1)"/>
+      <column name="COD_SOCIAL_SECURITY" remarks="Código da Incidência Tributária da rubrica, para a Previdência Social." type="VARCHAR2(2)"/>
+      <column name="COD_INCOME_TAX" remarks="Código da Incidência Tributária da rubrica, para o IRRF." type="VARCHAR2(2)"/>
+      <column name="COD_GUARANTEE_FUND" remarks="Código da Incidência Tributária da rubrica, para o FGTS." type="VARCHAR2(2)"/>
+      <column name="COD_LABOR_UNION_CONTRIB" remarks="Código da Incidência Tributária da rubrica, para a Contribuição Sindical Laboral." type="VARCHAR2(2)"/>
+      <column name="IND_WEEKLY_REST_CALC" remarks="Indicador de repercussão da rubrica no cálculo do DSR (Descanso Semanal Remunerado) S - sim N - não" type="CHAR(1)"/>
+      <column name="IND_THIRTEENTH_SAL_CALC" remarks="Indicador de repercussão da rubrica no cálculo do Décimo Terceiro Salário. S - sim N - não" type="CHAR(1)"/>
+      <column name="IND_VACATION_CALC" remarks="Indicador de repercussão da rubrica no cálculo das Férias. S - sim N - não" type="CHAR(1)"/>
+      <column name="IND_ADVANCE_NOTICE_CALC" remarks="Indicator de repercussão da rubrica no cálculo do Aviso Prévio. S - sim N - não" type="CHAR(1)"/>
+      <column name="PCT_PAYROLL_ITEM" remarks="Fator da rubrica. Exemplo: Horas Extras 50%, fator = 50." type="NUMBER(7,4)"/>
+      <column name="DSC_OBS" remarks="Descrição da Observação" type="VARCHAR2(300)"/>
+      <column name="IND_SOCIAL_SECURITY_PRC" remarks="Indicador do Tipo do Processo que determina a não incidência de Contribuição Previdenciária. 1 - Administrativo; 2 - Judicial." type="CHAR(1)"/>
+      <column name="NUM_SOCIAL_SECURITY_PRC" remarks="Número do Processo que determina a não incidência de Contribuição Previdenciária." type="VARCHAR2(20)"/>
+      <column name="IND_SOCIAL_SECURITY_DECISION" remarks="Indicador da Extensão da Decisão/Sentença. 1 - Contribuição Previdenciária Patronal; 2 - Contribuição Previdenciária Patronal + Descontada dos Segurados;" type="CHAR(1)"/>
+      <column name="NUM_INCOME_TAX_PRC" remarks="Número do Processo que determina a não incidência de IRRF" type="VARCHAR2(20)"/>
+      <column name="NUM_GUARANTEE_FUND_PRC" remarks="Número do Processo que determina a não incidência de FGTS" type="VARCHAR2(20)"/>
+      <column name="NUM_LABOR_UNION_PRC" remarks="Número do Processo que determina a não incidência de Contribuição Sindical" type="VARCHAR2(20)"/>
+      <column name="IDT_UPPER_LVL_PIT" remarks="Identificador da Ocorrência de Nível Superior" type="NUMBER(22)"/>
+      <column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+      <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+    </createTable>
+    <rollback>
+      <dropTable tableName="TBR_CAD_2023_PIT_OC"/>
+    </rollback>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="2">
+    <addUniqueConstraint columnNames="IDT_PAYROLL_ITEM, DAT_OCCURENCE" constraintName="UK_TBR_CAD_2023_PIT_OC_001" tableName="TBR_CAD_2023_PIT_OC"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="3">
+    <addPrimaryKey columnNames="IDT_PIT_OC" constraintName="PK_TBR_CAD_2023_PIT_OC" tableName="TBR_CAD_2023_PIT_OC"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="4">
+    <addForeignKeyConstraint baseColumnNames="IDT_PAYROLL_ITEM" baseTableName="TBR_CAD_2023_PIT_OC" constraintName="FK_TBR_CAD_2023_PIT_OC_001" referencedColumnNames="IDT_PAYROLL_ITEM" referencedTableName="TBR_CAD_2023_PAY_IT"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="5">
+    <addForeignKeyConstraint baseColumnNames="IDT_UPPER_LVL_PIT" baseTableName="TBR_CAD_2023_PIT_OC" constraintName="FK_TBR_CAD_2023_PIT_OC_002" referencedColumnNames="IDT_PIT_OC" referencedTableName="TBR_CAD_2023_PIT_OC"/>
+  </changeSet>
+</databaseChangeLog>

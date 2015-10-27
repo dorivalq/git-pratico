@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+	<changeSet author="lucasbittencurt" id="1">
+		<insert tableName="FMK_VISUAL_COMPONENT_CATALOG">
+			<column name="ID_VISUAL_COMPONENT_CATALOG" valueComputed="fnc_fmk_jpa_seq_nextval('FmkVisualComponentCatalog')" />
+			<column name="S_EJBQL" value="SELECT o FROM TbrCad3016Emplr o WHERE (:numFedTax is null OR o.numFedTax != :numFedTax) AND (:dscEmployer is null OR o.dscEmployer != :dscEmployer)" />
+			<column name="S_DESCRIPTION" value="Catalogo de Empregador vinculado ao cargo." />
+			<column name="S_COD_CATALOG" value="CAT_BRANCH_EMPLR" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="lucasbittencurt" id="2">
+		<insert tableName="FMK_VISUAL_COMPONENT_CATALOG">
+			<column name="ID_VISUAL_COMPONENT_CATALOG" valueComputed="fnc_fmk_jpa_seq_nextval('FmkVisualComponentCatalog')" />
+			<column name="S_EJBQL" value="SELECT o FROM TbrCadCompany o WHERE (:numFedTax is null OR o.numFedTax != :numFedTax) AND (:dscCompany is null OR o.dscCompany != :dscCompany)" />
+			<column name="S_DESCRIPTION" value="Catalogo de Empresas vinculadas ao cargo" />
+			<column name="S_COD_CATALOG" value="CAT_COMPANY_EMPLR" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

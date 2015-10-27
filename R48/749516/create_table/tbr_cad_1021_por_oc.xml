@@ -1,0 +1,56 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  <changeSet author="dorivalquerino" id="1">
+    <createTable tableName="TBR_CAD_2085_WK_SFT" remarks="Cadastro dos turnos de trabalho da empresa.">
+		<column name="IDT_PORT_OC" remarks="Identificador de Ocorrência do Operador Portuário" type="NUMBER(22)">
+			<constraints nullable="false"/>
+		</column>
+		<column name="IDT_PORT" remarks="Identificador do Operador Portuário" type="NUMBER(22)">
+			<constraints nullable="false"/>
+		</column>
+		<column name="DAT_OCCURRENCE" remarks="Data da Ocorrênica" type="TIMESTAMP">
+			<constraints nullable="false"/>
+		</column>
+		<column name="DSC_OCCUR_ORIG" remarks="Ocorrência de Origem" type="VARCHAR2(25)">
+			<constraints nullable="false"/>
+		</column>
+		<column name="IND_LAYOUT_ESOCIAL" remarks="Informação de Controle. Indicador utilizado para sinalizar que o layoututilizado na integração foi o XML formato eSOCIAL. Preenchido comS - Layout eSocial.N ou nulo - Layout Thomson Reuters;Domínio DM_SIM_NAO." type="CHAR(1)"/>
+		<column name="COD_OPER" remarks="Informação de Controle. Indicador da operação proveniente do layout eSocial.Preenchido com : I - Inclusão; A - Alteração; E - Exclusão;IA - Inclusão ou Alteração; Domínio DM_TIPO_OPERACAO_INTEGRACAO." type="VARCHAR2(2)"/>
+		<column name="COD_ID_EVENT" remarks="Identificador único do Evento eSocial (id)" type="VARCHAR2(36)"/>
+		<column name="COD_EVENT" remarks="Código do Evento eSocial . Ex: S-1000	" type="VARCHAR2(36)"/>
+		<column name="IND_ENVIRONMENT" remarks="Identificação do ambiente (tpAmb): 1 - Produção; 2 - Pré-produção - dados reais; 3 - Pré-produção - dados fictícios. Domínio DM_EFD_EVENTO_TIPO_AMBIENTE." type="CHAR(1)"/>
+		<column name="IND_PRC_EMI" remarks="Processo de emissão do evento eSocial (prcEmi) 1- Emissão com aplicativo do empregador Domínio DM_EFD_EVENTO_PROCESSO_EMISSAO." type="CHAR(1)"/>
+		<column name="COD_VS_PROC" remarks="Versão do Processo emissor do evento eSocial (verProc)" type="VARCHAR2(20)"/>
+		<column name="IND_OC_EVT" remarks="Indicador de Ocorrência ou Evento: O - Ocorrência E - Evento" type="CHAR(1)"/>
+		<column name="IND_STATUS" remarks="Indicador do Status" type="CHAR(1)"/>
+		<column name="DAT_INSERT_UPDATE" remarks="Date de início de validade do cadastro para o TAX BR." type="DATE">
+			<constraints nullable="false"/>
+		</column>
+		<column name="DAT_END_EFFECTIVE" remarks="Data final de validade do cadastro." type="DATE"/>
+		<column name="DAT_INSERT_UPDATE_NEW" remarks="Nova Data de início de validade" type="DATE"/>
+		<column name="DAT_END_EFFECTIVE_NEW" remarks="Nova Data fim de validade" type="DATE"/>
+		<column name="IND_ENVIR_RISK_WORK" remarks="Aliquota Rat" type="NUMBER(1)"/>
+		<column name="PCT_ACCIDENT_PREV" remarks="Fator Acidentário de Prevenção (FAP)	" type="NUMBER(,4)"/>
+		<column name="PCT_ADJUSTED_ENVIR_RISK_WK" remarks="Aliquota Rat Ajustada	" type="NUMBER(,4)"/>
+		<column name="IDT_UPPER_LVL_POR" remarks="Identificador da Ocorrência de Nível Superior" type="NUMBER(22)"/>
+		<column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+		<column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+		<column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+		<column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+
+    </createTable>
+
+  </changeSet>
+ 
+ <changeSet author="dorivalquerino" id="2">
+    <addUniqueConstraint columnNames="IDT_PORT, DAT_OCCURRENCE" constraintName="UK_TBR_CAD_1021_POR_OC_001" tableName="TBR_CAD_1021_POR_OC"/>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="3">
+    <addPrimaryKey columnNames="IDT_PORT_OC" constraintName="PK_TBR_CAD_1021_POR_OC" tableName="TBR_CAD_1021_POR_OC"/>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="4">
+    <addForeignKeyConstraint baseColumnNames="IDT_PORT" baseTableName="TBR_CAD_1021_POR_OC" constraintName="FK_TBR_CAD_1021_POR_OC_001" referencedColumnNames="IDT_PORT" referencedTableName="TBR_CAD_1021_PORT"/>
+  </changeSet>
+  <changeSet author="dorivalquerino" id="5">
+    <addForeignKeyConstraint baseColumnNames="IDT_UPPER_LVL_POR" baseTableName="TBR_CAD_1021_POR_OC" constraintName="FK_TBR_CAD_1021_POR_OC_002" referencedColumnNames="IDT_PORT_OC" referencedTableName="TBR_CAD_1021_POR_OC"/>
+  </changeSet>
+</databaseChangeLog>

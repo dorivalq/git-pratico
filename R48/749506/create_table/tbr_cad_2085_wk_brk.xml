@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  <changeSet author="regiseduardogregol" id="1">
+    <createTable tableName="TBR_CAD_2085_WK_BRK" remarks="Contém os intervalos contidos no turno/jornada de trabalho.">
+      <column name="IDT_WORKING_BREAK_OC" remarks="Identificador de Ocorrência do intervalo de trabalho" type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="IDT_WORKING_SHIFT_OC" remarks="Identificador do turno/jornada de trabalho." type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="IND_WK_BRK_TYPE" remarks="Tipo de Intervalo da Jornada.  1 - Intervalo em Horário Fixo; 2 - Intervalo em Horário Variável;" type="CHAR(1)"/>
+      <column name="QTD_WK_BRK_MINUTE" remarks="Duração do intervalo em minutos." type="NUMBER(3)"/>
+      <column name="TME_START" remarks="Hora de início do intervalo do turno/jornada de trabalho." type="DATE"/>
+      <column name="TME_END" remarks="Hora de término do intervalo do turno/jornada de trabalho." type="DATE"/>
+      <column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+      <column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+    </createTable>
+    <rollback>
+      <dropTable tableName="TBR_CAD_2085_WK_BRK"/>
+    </rollback>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="2">
+    <addUniqueConstraint columnNames="IDT_WORKING_SHIFT_OC, IND_WK_BRK_TYPE, QTD_WK_BRK_MINUTE, TME_START, TME_END" constraintName="UK_TBR_CAD_2085_WK_BRK_001" tableName="TBR_CAD_2085_WK_BRK"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="3">
+    <addPrimaryKey columnNames="IDT_WORKING_BREAK_OC" constraintName="PK_TBR_CAD_2085_WK_BRK" tableName="TBR_CAD_2085_WK_BRK"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="4">
+    <addForeignKeyConstraint baseColumnNames="IDT_WORKING_SHIFT_OC" baseTableName="TBR_CAD_2085_WK_BRK" constraintName="FK_TBR_CAD_2085_WK_BRK_001" referencedColumnNames="IDT_WORKING_SHIFT_OC" referencedTableName="TBR_CAD_2085_WK_SFT_OC"/>
+  </changeSet>
+</databaseChangeLog>

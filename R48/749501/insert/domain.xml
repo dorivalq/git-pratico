@@ -1,0 +1,91 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="lucasbittencurt" id="1">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_1" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="2">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_2" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="3">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_3" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="4">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_4" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="5">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_5" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="6">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_6" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="7">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_7" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="8">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_8" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="9">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_9" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="10">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_10" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="lucasbittencurt" id="11">
+		<insert tableName="FMK_DICTIONARY_FUNCTIONALITY">
+			<column name="ID_DICTIONARY_FUNCTIONALITY" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_11" />
+			<column name="ID_FUNCTIONALITY" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Cargos')" />
+		</insert>
+	</changeSet>
+	
+</databaseChangeLog>

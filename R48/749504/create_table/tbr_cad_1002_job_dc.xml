@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet author="lucasbittencurt" id="1">
+        <createTable remarks="Contem o cadastro das funcoes previstas no quadro de empregados da organizacao. Este cadastro é utilizado para o EFD-Social, e está relacionado com os eventos de envio para o governo." 
+        	tableName="TBR_CAD_1002_JOB_DC">
+        	
+        	<column name="IDT_JOB_DESCRIPTION" remarks="Identificador unico da funcao no cadastro." type="NUMBER(22)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="IDT_EMPLR" remarks="Identificador do empregador" type="NUMBER(22)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="COD_JOB_DESCRIPTION" remarks="Codigo do funcao" type="VARCHAR2(30)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <!-- Framework -->
+            <column name="D_LAST_UPDATE_DATE" remarks="Data da ultima atualizacao. Campo utilizado pela framework de aplicacao de regras de negocio de validacao." type="DATE">
+            </column>
+            <column name="S_LAST_UPDATE_BY" remarks="Responsavel pela ultima atualizacao. Campo utilizado pela framework de aplicacao de regras de negocio de validacao." type="VARCHAR2(250)">
+            </column>
+            <column name="D_CREATION_DATE" remarks="Data da criacao do registro. Campo utilizado pela framework de aplicacao de regras de negocio de validacao." type="DATE">
+            </column>
+            <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicacao de regras de negocio de validacao." type="VARCHAR2(250)">
+            </column>
+        </createTable>        
+    </changeSet>
+	
+    <changeSet author="lucasbittencurt" id="2">
+        <addUniqueConstraint columnNames="IDT_EMPLR, COD_JOB_DESCRIPTION" constraintName="UK_TBR_CAD_1002_JOB_DC_001" tableName="TBR_CAD_1002_JOB_DC"/>        
+    </changeSet>
+	
+    <changeSet author="lucasbittencurt" id="3">
+        <addPrimaryKey columnNames="IDT_JOB_DESCRIPTION" constraintName="PK_TBR_CAD_1002_JOB_DC" tableName="TBR_CAD_1002_JOB_DC"/>
+    </changeSet>    
+
+    <changeSet author="lucasbittencurt" id="4">
+        <addForeignKeyConstraint baseColumnNames="IDT_EMPLR" baseTableName="TBR_CAD_1002_JOB_DC" constraintName="FK_TBR_CAD_1002_JOB_DC_001"  
+        						 referencedColumnNames="IDT_EMPLR" referencedTableName="TBR_CAD_3016_EMPLR"/>
+    </changeSet>    
+</databaseChangeLog>   

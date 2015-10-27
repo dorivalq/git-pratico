@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet author="fabiofernandes81" id="1">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadCompany_numFedTax" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadCompany_dscCompany" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.numFedTaxEmployer" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="4">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.dscEmployer" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="HeaderPanel.generalData" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="fabiofernandes81" id="6">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrParPrcProfile.registros" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.detail" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.Status" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="9">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.dateOccurrence" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="10">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.codEvent" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="11">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037BldOc.idtEvent" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="12">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad0037Build.log" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="13">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.datLastOccurence" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="14">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCadPartner.generalInfo" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="fabiofernandes81" id="15">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.additionalInfo" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="16">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.additionalInfoFld" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="17">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.indPrcEmi" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="18">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.datInsertUpdateNew" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="19">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="TbrCad2037Sector.datEndEffectiveNew" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+	
+	<changeSet author="fabiofernandes81" id="20">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="btnFechar" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="21">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="labelPattern.description" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="22">
+		<comment/>
+		<insert tableName="fmk_dictionary_functionality">
+			<column name="id_dictionary_functionality" valueComputed="fnc_fmk_jpa_seq_nextval('FmkDictionaryFunctionality')" />
+			<column name="s_dictionary_key" value="labelPatter.download" />
+			<column name="id_functionality" valueComputed="(SELECT id_functionality FROM fmk_functionality WHERE s_functionality_name = 'Lotações')" />
+		</insert>
+	</changeSet>
+	
+</databaseChangeLog>

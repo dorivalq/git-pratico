@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet author="fabiofernandes81" id="1">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.numFedTaxEmployer" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="2">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.dscEmployer" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="3">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.Status" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="4">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.dateOccurrence" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="5">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.codEvent" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="6">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.idtEvent" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="7">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.finalDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="8">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037BldOc.iniDate" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="9">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.detail" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+		
+	<changeSet author="fabiofernandes81" id="10">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.log" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="11">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.occurrenceOrigin" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="12">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.event" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="13">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.id" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="14">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.complementaryData" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="15">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.generalInfo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="16">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.indContributionBulding" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="17">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.numRiskWorkPrc" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="18">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.additionalInfo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="19">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.additionalInfoFld" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="20">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.indEnvironment" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="21">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.indPrcEmi" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="22">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.datInsertUpdateNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="23">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad0037Build.datEndEffectiveNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+		
+</databaseChangeLog>
+

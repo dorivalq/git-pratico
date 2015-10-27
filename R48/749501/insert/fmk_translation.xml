@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	
+	<!-- DM_EVENT_STATUS -->
+	<changeSet author="fabiofernandes81" id="1">
+		<comment>Cria a tradução do '1 - Integrado'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Integrado" />
+			<column name="S_SHORT" value="Integrado" />
+			<column name="S_DESCRIPTION" value="Integrado" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_1" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">
+		<comment>Cria a tradução do '2 - Pendente ação do usuário'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Pendente ação do usuário" />
+			<column name="S_SHORT" value="Pendente ação do usuário" />
+			<column name="S_DESCRIPTION" value="Pendente ação do usuário" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_2" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">
+		<comment>Cria a tradução do '3 - XML Gerado'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="XML Gerado" />
+			<column name="S_SHORT" value="XML Gerado" />
+			<column name="S_DESCRIPTION" value="XML Gerado" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_3" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="4">
+		<comment>Cria a tradução do '4 - Erro Geração XML'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Erro Geração XML" />
+			<column name="S_SHORT" value="Erro Geração XML" />
+			<column name="S_DESCRIPTION" value="Erro Geração XML" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_4" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">
+		<comment>Cria a tradução do '5 - Pendente de Envio'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Pendente de Envio" />
+			<column name="S_SHORT" value="Pendente de Envio" />
+			<column name="S_DESCRIPTION" value="Pendente de Envio" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_5" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="6">
+		<comment>Cria a tradução do '6 - Rejeitado pelo Fisco'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Rejeitado pelo Fisco" />
+			<column name="S_SHORT" value="Rejeitado pelo Fisco" />
+			<column name="S_DESCRIPTION" value="Rejeitado pelo Fisco" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_6" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">
+		<comment>Cria a tradução do '7 - Aguardando Retorno'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Aguardando Retorno" />
+			<column name="S_SHORT" value="Aguardando Retorno" />
+			<column name="S_DESCRIPTION" value="Aguardando Retorno" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_7" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">
+		<comment>Cria a tradução do '8 - Erros na geração do XML'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Erros na geração do XML" />
+			<column name="S_SHORT" value="Erros na geração do XML" />
+			<column name="S_DESCRIPTION" value="Erros na geração do XML" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_8" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="9">
+		<comment>Cria a tradução do '9 - Enviado com Sucesso'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Enviado com Sucesso" />
+			<column name="S_SHORT" value="Enviado com Sucesso" />
+			<column name="S_DESCRIPTION" value="Enviado com Sucesso" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_9" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="10">
+		<comment>Cria a tradução do '10 - Desativado'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Desativado" />
+			<column name="S_SHORT" value="Desativado" />
+			<column name="S_DESCRIPTION" value="Desativado" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_10" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="11">
+		<comment>Cria a tradução do '11 - Impedido'</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')" />
+			<column name="S_TEXT" value="Impedido" />
+			<column name="S_SHORT" value="Impedido" />
+			<column name="S_DESCRIPTION" value="Impedido" />
+			<column name="S_LOCALE" value="pt" />
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_11" />			
+		</insert>		
+	</changeSet>
+		
+</databaseChangeLog>

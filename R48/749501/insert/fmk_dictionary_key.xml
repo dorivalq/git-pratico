@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">	
+	
+	<!-- DM_EVENT_STATUS -->		
+	<changeSet author="fabiofernandes81" id="1">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_9" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+	
+	<changeSet author="fabiofernandes81" id="2">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_10" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="3">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="DM_EVENT_STATUS_11" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+</databaseChangeLog>

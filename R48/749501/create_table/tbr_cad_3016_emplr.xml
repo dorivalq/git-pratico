@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet author="lucasbittencurt" id="1">
+        <createTable remarks="Cadastro do Empregador do eSocial." tableName="TBR_CAD_3016_EMPLR">
+            
+            <column name="IDT_EMPLR" remarks="Identificador único do Empregador." type="NUMBER(22)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="NUM_FED_TAX" remarks="CNPJ do Empregador." type="VARCHAR2(14)">
+                <constraints nullable="false"/>
+            </column>
+			
+			<column name="IDT_COMPANY" remarks="Identificador da empresa a qual o Empregador pertence." type="NUMBER(22)">
+				<constraints nullable="false"/>
+            </column>
+            
+            <column name="DSC_EMPLOYER" remarks="Razão social do Empregador" type="VARCHAR2(200)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="IND_REGISTRATION_TYPE" remarks="Tipo de inscrição do Empregador (tpInsc) 1 – CNPJ 2 – CPF Domínio DM_EFD_EVENTO_TP_INSCRICAO." type="CHAR(1)"/>
+            
+			<!-- Framework -->        	
+            <column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE">
+            </column>
+            <column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)">
+            </column>
+            <column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE">
+            </column>
+            <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)">
+            </column>
+        </createTable>        
+    </changeSet>
+	
+    <changeSet author="fabiofernandes81" id="2">
+        <addUniqueConstraint columnNames="NUM_FED_TAX" constraintName="UK_TBR_CAD_3016_EMP_001" tableName="TBR_CAD_3016_EMPLR"/>        
+    </changeSet>
+	
+    <changeSet author="fabiofernandes81" id="3">
+        <addPrimaryKey columnNames="IDT_EMPLR" constraintName="PK_TBR_CAD_3016_EMP " tableName="TBR_CAD_3016_EMPLR"/>
+    </changeSet>    
+
+    <changeSet author="fabiofernandes81" id="4">
+        <addForeignKeyConstraint baseColumnNames="IDT_COMPANY" baseTableName="TBR_CAD_3016_EMPLR" constraintName="FK_TBR_CAD_3016_EMP_001"  
+        						 referencedColumnNames="IDT_COMPANY	" referencedTableName="TBR_CAD_COMPANY"/>
+    </changeSet>
+
+   
+
+</databaseChangeLog>   

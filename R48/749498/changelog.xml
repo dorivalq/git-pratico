@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">    
+
+    <include file="drop/tbr_cad_2037_sector.xml" relativeToChangelogFile="true"/>    
+    <include file="create_table/tbr_cad_2037_sector.xml" relativeToChangelogFile="true"/>    
+    <include file="create_table/tbr_cad_2037_str_oc.xml" relativeToChangelogFile="true"/>     
+    <include file="create_table/tbr_cad_2037_str_prc.xml" relativeToChangelogFile="true"/>     
+    <include file="labels/insert/fmk_dictionary_key.xml" relativeToChangelogFile="true"/>     
+    <include file="labels/insert/fmk_translation.xml" relativeToChangelogFile="true"/>     
+    <include file="labels/insert/fmk_dictionary_functionality.xml" relativeToChangelogFile="true"/>     
+        
+</databaseChangeLog>

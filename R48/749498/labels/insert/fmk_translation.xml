@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">	
+
+	<changeSet author="fabiofernandes81" id="1">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.detail</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Integrado/Gerado Detalhado"/>
+			<column name="S_SHORT" value="Integrado/Gerado Detalhado"/>
+			<column name="S_DESCRIPTION" value="Integrado/Gerado Detalhado"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.detail"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.datLastOccurence</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Data da Última Ocorrência"/>
+			<column name="S_SHORT" value="Data da Última Ocorrência"/>
+			<column name="S_DESCRIPTION" value="Data da Última Ocorrência"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datLastOccurence"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.additionalInfo</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Informações Adicionais"/>
+			<column name="S_SHORT" value="Informações Adicionais"/>
+			<column name="S_DESCRIPTION" value="Informações Adicionais"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.additionalInfo"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="4">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.additionalInfoFld</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="INFORMAÇÕES ADICIONAIS"/>
+			<column name="S_SHORT" value="INFORMAÇÕES ADICIONAIS"/>
+			<column name="S_DESCRIPTION" value="INFORMAÇÕES ADICIONAIS"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.additionalInfoFld"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.indEnvironment</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Tipo do Ambiente"/>
+			<column name="S_SHORT" value="Tipo do Ambiente"/>
+			<column name="S_DESCRIPTION" value="Tipo do Ambiente"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.indEnvironment"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="6">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.indPrcEmi</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Processo de Emissão do Evento"/>
+			<column name="S_SHORT" value="Processo de Emissão do Evento"/>
+			<column name="S_DESCRIPTION" value="Processo de Emissão do Evento"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.indPrcEmi"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.datInsertUpdateNew</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova Data Inicial"/>
+			<column name="S_SHORT" value="Nova Data Inicial"/>
+			<column name="S_DESCRIPTION" value="Nova Data Inicial"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datInsertUpdateNew"/>			
+		</insert>
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">
+		<comment>Cria registro FMK_TRANSLATION com S_LOCALE = 'pt_BR' e S_DICTIONARY_KEY = 'TbrCad2037Sector.datEndEffectiveNew</comment>
+		<insert tableName="FMK_TRANSLATION">
+			<column name="ID_TRANSLATION" valueComputed="fnc_fmk_jpa_seq_nextval('FmkTranslation')"/>
+			<column name="S_TEXT" value="Nova Data Final"/>
+			<column name="S_SHORT" value="Nova Data Final"/>
+			<column name="S_DESCRIPTION" value="Nova Data Final"/>
+			<column name="S_LOCALE" value="pt"/>
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datEndEffectiveNew"/>			
+		</insert>
+	</changeSet>
+		
+</databaseChangeLog>

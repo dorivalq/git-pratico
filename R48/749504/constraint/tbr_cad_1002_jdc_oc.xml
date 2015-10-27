@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+	
+	<changeSet author="lucasbittencurt" id="1">
+        <addForeignKeyConstraint baseColumnNames="IDT_JOB_DESCRIPTION" baseTableName="TBR_CAD_1002_JDC_OC" constraintName="FK_TBR_CAD_1002_JOB_OC_001"  
+			 referencedColumnNames="IDT_JOB_DESCRIPTION" referencedTableName="TBR_CAD_1002_JOB_DC"/>
+    </changeSet>
+	
+    <changeSet author="lucasbittencurt" id="2">
+        <addForeignKeyConstraint baseColumnNames="IDT_UPPER_LVL_JDC" baseTableName="TBR_CAD_1002_JDC_OC" constraintName="FK_TBR_CAD_1002_JOB_OC_002"  
+			 referencedColumnNames="IDT_JDC_OC" referencedTableName="TBR_CAD_1002_JDC_OC"/>
+    </changeSet>    
+</databaseChangeLog>   

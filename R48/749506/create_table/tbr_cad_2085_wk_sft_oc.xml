@@ -1,0 +1,52 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+  <changeSet author="regiseduardogregol" id="1">
+    <createTable tableName="TBR_CAD_2085_WK_SFT_OC" remarks="Cadastro das Ocorrências dos turnos de trabalho da empresa.">
+      <column name="IDT_WORKING_SHIFT_OC" remarks="Identificador único da Ocorrência do turno de trabalho no cadastro. Não é de conhecimento do usuário." type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="IDT_WORKING_SHIFT" type="NUMBER(22)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="DAT_OCCURRENCE" remarks="Data da Ocorrência" type="DATE"/>
+      <column name="IND_LAYOUT_ESOCIAL" remarks="Informação de Controle.   Indicador utilizado para sinalizar que o layout  utilizado na integração foi o XML formato eSOCIAL. Preenchido com  S - Layout eSocial.                          N ou nulo - Layout Thomson Reuters;            Domínio DM_SIM_NAO." type="CHAR(1)"/>
+      <column name="COD_OPER" remarks="Informação de Controle.       Indicador da operação proveniente do layout eSocial.  Preenchido com : I - Inclusão;                           A - Alteração;                           E - Exclusão;                          IA - Inclusão ou Alteração; Domínio DM_TIPO_OPERACAO_INTEGRACAO." type="VARCHAR2(2)"/>
+      <column name="COD_ID_EVENT" remarks="Identificador único do Evento eSocial (id)" type="VARCHAR2(36)"/>
+      <column name="COD_EVENT" remarks="Código do Evento eSocial . Ex: S-1000, S-1020, etc" type="VARCHAR2(36)"/>
+      <column name="IND_ENVIRONMENT" remarks="Identificação do ambiente (tpAmb): 1 - Produção; 2 - Pré-produção - dados reais; 3 - Pré-produção - dados fictícios. Domínio DM_EFD_EVENTO_TIPO_AMBIENTE." type="CHAR(1)"/>
+      <column name="IND_PRC_EMI" remarks="Processo de emissão do evento eSocial (prcEmi) 1- Emissão com aplicativo do empregador Domínio DM_EFD_EVENTO_PROCESSO_EMISSAO." type="CHAR(1)"/>
+      <column name="COD_VS_PROC" remarks="Versão do Processo emissor do evento eSocial (verProc)" type="VARCHAR2(20)"/>
+      <column name="IND_OC_EVT" remarks="Indicador de Ocorrência ou Evento: O - Ocorrência E - Evento" type="CHAR(1)"/>
+      <column name="IND_STATUS" remarks="Indicador do Status" type="CHAR(1)"/>
+      <column name="DAT_INSERT_UPDATE" remarks="Data de início da validade do cadastro." type="DATE">
+        <constraints nullable="false"/>
+      </column>
+      <column name="DAT_END_EFFECTIVE" remarks="Data final de validade do cadastro." type="DATE"/>
+      <column name="DAT_INSERT_UPDATE_NEW" remarks="Nova data início validade." type="DATE"/>
+      <column name="DAT_END_EFFECTIVE_NEW" remarks="Nova data fim de validade." type="DATE"/>
+      <column name="TME_ARRIVING" remarks="Horário de entrada." type="DATE"/>
+      <column name="TME_DEPARTURE" remarks="Horário de saída." type="DATE"/>
+      <column name="QTD_WK_SFT_MINUTE" remarks="Duração da jornada, em minutos." type="NUMBER(4)"/>
+      <column name="IND_FLEX_TIME" remarks="Indicativo se é permitida a flexibilidade Valores Assumidos são: S - Sim N - Não" type="CHAR(1)"/>
+      <column name="IDT_UPPER_LVL_WK_STF" remarks="Identificador da Ocorrência de Nível Superior" type="NUMBER(22)"/>
+      <column name="D_LAST_UPDATE_DATE" remarks="Data da última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="S_LAST_UPDATE_BY" remarks="Responsável pela última atualização. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+      <column name="D_CREATION_DATE" remarks="Data da criação do registro. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="DATE"/>
+      <column name="S_CREATED_BY" remarks="Criado por. Campo utilizado pela framework de aplicação de regras de negócio de validação." type="VARCHAR2(250)"/>
+    </createTable>
+    <rollback>
+      <dropTable tableName="TBR_CAD_2085_WK_SFT_OC"/>
+    </rollback>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="2">
+    <addUniqueConstraint columnNames="IDT_WORKING_SHIFT, DAT_OCCURRENCE" constraintName="UK_TBR_CAD_2085_WK_SFT_OC_001" tableName="TBR_CAD_2085_WK_SFT_OC"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="3">
+    <addPrimaryKey columnNames="IDT_WORKING_SHIFT_OC" constraintName="PK_TBR_CAD_2085_WK_OC_SFT" tableName="TBR_CAD_2085_WK_SFT_OC"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="4">
+    <addForeignKeyConstraint baseColumnNames="IDT_WORKING_SHIFT" baseTableName="TBR_CAD_2085_WK_SFT_OC" constraintName="FK_TBR_CAD_2085_WK_SFT_OC_001" referencedColumnNames="IDT_WORKING_SHIFT" referencedTableName="TBR_CAD_2085_WK_SFT"/>
+  </changeSet>
+  <changeSet author="regiseduardogregol" id="5">
+    <addForeignKeyConstraint baseColumnNames="IDT_UPPER_LVL_WK_STF" baseTableName="TBR_CAD_2085_WK_SFT_OC" constraintName="FK_TBR_CAD_2085_WK_SFT_OC_002" referencedColumnNames="IDT_WORKING_SHIFT_OC" referencedTableName="TBR_CAD_2085_WK_SFT_OC"/>
+  </changeSet>
+</databaseChangeLog>

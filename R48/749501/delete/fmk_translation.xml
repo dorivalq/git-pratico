@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	
+	
+	<changeSet author="fabiofernandes81" id="1">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_1'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="2">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_2'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="3">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_3'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="4">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_4'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_5'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="6">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_6'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_7'</where>
+		</delete>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">		
+		<delete tableName="FMK_TRANSLATION">
+			<where>S_LOCALE = 'pt' AND S_DICTIONARY_KEY = 'DM_EVENT_STATUS_8'</where>
+		</delete>		
+	</changeSet>
+		
+</databaseChangeLog>

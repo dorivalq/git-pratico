@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet author="fabiofernandes81" id="1">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.detail" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="2">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datLastOccurence" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="3">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.additionalInfo" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>	
+
+	<changeSet author="fabiofernandes81" id="4">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.additionalInfoFld" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="5">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.indEnvironment" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="6">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.indPrcEmi" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="7">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datInsertUpdateNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+
+	<changeSet author="fabiofernandes81" id="8">
+		<insert tableName="FMK_DICTIONARY">
+			<column name="S_DICTIONARY_KEY" value="TbrCad2037Sector.datEndEffectiveNew" />
+			<column name="ID_DICTIONARY_TYPE" valueComputed="(SELECT id_dictionary_type FROM fmk_dictionary_type WHERE s_dictionary_type_name = 'label')" />
+			<column name="S_CUSTOM_VERSION" value="N" />			
+		</insert>		
+	</changeSet>
+		
+</databaseChangeLog>
+
